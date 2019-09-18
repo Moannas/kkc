@@ -1,0 +1,41 @@
+<view class="main">
+    <view class="isauto">
+            <view class="top">
+                <p>历史账单</p>
+                <view class="top_icon" bindtap="deleALL">
+                    <span></span>
+                    清空所有
+                </view>
+            </view>
+            <block wx:if="{{noList==false}}">
+                <view wx:for="{{data}}" wx:key="item" data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+                    <view class="content">
+                        <view class="title">
+                            <span>{{item.businessName}}</span>
+                            <span>{{item.states==0?"未支付":"已支付"}}</span>
+                        </view>
+                        <view class="beginTimer">
+                            <span></span>
+                            <p>开始时间：</p>
+                            <p>{{item.startTime}}</p>
+                        </view>
+                         <view class="overTimer">
+                            <span></span>
+                            <p>结束时间：</p>
+                            <p>{{item.endTime}}</p>
+                        </view>
+                        <view class="Monetary">
+                            <p>消费金额：￥{{item.billAmount}}</p>
+                            <span bindtap="look" data-index='{{item.roomConsumptionId}}'>查看详情</span>
+                        </view>
+                    </view>
+                    <view class="remove" bindtap="delItem"  data-item='{{item}}'>删除 </view>
+                </view>
+            </block>
+            <!-- 没有数据时 -->
+            <view class="nolist" wx:else>
+                <image src="../../../images/nolist.png"></image>
+                <view>空空如也~</view>
+            </view>
+    </view>
+</view>

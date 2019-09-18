@@ -1,0 +1,74 @@
+/* scroll-view滚动超长 */
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+
+.list-disScroll {
+    overflow-y: hidden
+}
+
+.header {
+    height: 176rpx;
+    background-color: #f3f3f3
+}
+
+.search {
+    padding: 16rpx 30rpx 0;
+    margin: 0;
+    height: 66rpx;
+}
+
+.search-content {
+    width: 500rpx
+}
+
+.search-content-default {
+    width: 590rpx;
+    transition: width .5s;
+}
+
+.search-comfirm-default {
+    font-size: 0;
+    transition: font-size 1s;
+}
+
+.search-comfirm {
+    flex-shrink: 0;
+    font-size: 28rpx;
+    color: #657aff;
+    transition: font-size 1s;
+}
+
+.tab {
+    height: 94rpx;
+    background-color: #f3f3f3
+}
+
+.scroll-wrapper {
+    white-space: nowrap;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 94rpx
+}
+
+.scroll-item {
+    display: inline-block;
+    margin-left: 30rpx;
+    background-color: #f3f3f3
+}
+
+.scroll-item:last-child {
+    margin-right: 30rpx
+}
+
+.head-item {
+    position: relative;
+    height: 94rpx;
+    line-height: 94rpx;
+    background-color: #f3f3f3;
+    text-align: center
+}

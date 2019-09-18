@@ -1,0 +1,12 @@
+<template name="tl-banner">
+    <view class="banner-container">
+        <swiper class="banner-swiper" indicator-dots="true" indicator-color="#ddd" indicator-active-color="#b42bff" autoplay="true"
+            interval="3000" duration="500">
+            <block wx:for="{{bannerData}}" wx:for-item="item" wx:key="">
+                <swiper-item>
+                    <image src="{{item.cover? item.cover : item.img}}" class="banner-image" data-id="{{item.id}}" bindtap="goDetail" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</template>

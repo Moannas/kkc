@@ -1,0 +1,133 @@
+.search-container {
+    background-color: #f3f3f3
+}
+
+/** 搜索框 **/
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #f3f3f3;
+    z-index: 99
+}
+
+.search {
+    padding: 0 30rpx;
+    margin: 0;
+    height: 88rpx
+}
+
+.search-content {
+    width: 500rpx
+}
+
+.search-content-default {
+    width: 590rpx;
+    transition: width .5s;
+}
+
+.search-comfirm-default {
+    font-size: 0;
+    transition: font-size 1s;
+}
+
+.search-comfirm {
+    flex-shrink: 0;
+    font-size: 28rpx;
+    color: #657aff;
+    transition: font-size 1s;
+}
+
+/** 搜索提示 **/
+.tips {
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #e3e3e3;
+    color: #657aff
+}
+
+.item,
+.item view {
+    background-color: #f3f3f3;
+}
+
+.item {
+    justify-content: flex-start;
+    height: 80rpx;
+    line-height: 80rpx
+}
+
+.item .icon-search {
+    flex-shrink: 0;
+    margin: 0 16rpx 2px 0
+}
+
+.name {
+    padding-left: 20rpx;
+    width: 100%;
+    height: 79rpx;
+    line-height: 79rpx;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.history {
+    padding: 88rpx 30rpx 0;
+    background-color: #f3f3f3
+}
+
+.head-tab {
+    position: fixed;
+    top: 88rpx;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 88rpx;
+    border-bottom: 1px solid #ddd;
+    background-color: #f3f3f3;
+    z-index: 99
+}
+
+.head-item {
+    position: relative;
+    width: 140rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    background-color: #f3f3f3;
+    text-align: center
+}
+
+.result {
+    padding-top: 176rpx
+}
+/* 缺歌反馈按钮-新增 */
+.fee-btn{
+    background: #f3f3f3;
+}
+.f-btn{
+    display: inline-block;
+    width:184rpx;
+    height:66rpx;
+    line-height: 66rpx;
+    text-align: right;
+    background:rgba(0,0,0,1);
+    border:4rpx solid rgba(255, 255, 255, 0.2);
+    opacity:0.4;
+    border-radius:5rpx;
+    font-size:24rpx;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:#FFF;
+    box-sizing: border-box;
+    padding-right: 20rpx;
+    cursor: touch;
+    margin-left: 30rpx;
+}
+.f-icon{
+    float: left;
+    width: 36rpx;
+    height: 36rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAkCAMAAAA0AnPTAAAAzFBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9jif6XAAAAQ3RSTlMAOAm3v3CHQAgw+7pXxwvAPTu7GUL+zwFoAtMkoEdRUHP6dbyLdiGajfmcZvjNqPyraiNl8CW4KEtujpHeA+rvKSvJXr1maQAAAOZJREFUOMu90tduwkAQheExNhgMJqaYZgihhBQgofeWnPd/J9ZEQcFrZkUu+C+tT9bsaIjKpcIbrtXrd4tE5QH4Poo0hPuST1wr/+6iRBW0iesVBfpEhzUeGgTEWRMBlCZ+m8mZcrmAaYVsJhswz4Zc8x/z3NNkonKZgDFC3m4EzGNMrn7vd/3cxog1U2EsrFizxkTcM6o1TfTlf5lrl9WqwIzGv9uwBUlZ8pYsh2i5O5swsln4/98eHNP8FsYnD5en6Hh/RtNhn0iaGV/HXkWE8Q+YJSeTjJDKqIgwSkK6mtCTmrAdAa02Tl53TOkdAAAAAElFTkSuQmCC) no-repeat center center;
+    background-size: contain;
+    margin-top: 15rpx;
+    margin-left: 15rpx;
+}

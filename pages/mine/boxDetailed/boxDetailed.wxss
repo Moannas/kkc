@@ -1,0 +1,83 @@
+page{
+    width: 100%;
+    height: 100%;
+    background: #fff
+}
+
+.main{
+    width: 690rpx;
+    height: 100%;
+    margin: auto;
+    font-family:"PingFang-SC-Bold";
+}
+
+.top{
+    margin-top: 60rpx
+}
+.top p{
+    font-size: 36rpx;
+    font-weight:bold;
+    color:rgba(2,4,51,1);
+    display: block;
+    line-height:80rpx;
+}
+.top span{
+    font-size: 60rpx;
+    font-weight:bold;
+    color:rgba(2,4,51,1);
+    line-height:80rpx;
+}
+.bottom{
+    margin-top: 70rpx
+}
+.bottom>p{
+    font-size:24rpx;
+    font-weight:500;
+    color:rgba(2,4,51,1);
+}
+.Tabs{
+    margin-top: 35rpx
+}
+.istbas{
+    width: 100%-8rpx;
+    height: 80rpx;
+    border: 4rpx solid #7D1CEA;
+    border-radius: 10rpx;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: #7D1CEA
+}
+.istbas p{
+    flex: 1;
+    height: 100%;
+    line-height: 80rpx
+}
+.active{
+    background: #7D1CEA;
+    color: #fff;
+}
+.Tabs_tex{
+    margin-top: 60rpx;
+}
+.Tabs_tex>view{
+    width: 100%;
+    height: 108rpx;
+    margin-bottom: 30rpx
+}
+.Tabs_tex p{
+    font-size: 24rpx;
+    color: #404B69;
+    font-weight:bold;
+}
+.Tabs_tex>view view{
+    font-size:32rpx;
+    font-weight:bold;
+    color:rgba(2,4,51,1);
+    margin-top: 20rpx
+}
+
+
+

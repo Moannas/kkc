@@ -1,0 +1,34 @@
+
+<view class="main">
+   <view class="top">
+       <p>包厢详情</p>
+       <span>{{Mydata.roomName}}</span>
+   </view>
+   <view class="bottom">
+       <p>欢唱类型</p>
+       <view class="Tabs">
+            <view class="istbas">
+                <p class="{{isActive==true?'active':''}}">按小时计费</p>
+                <p class="{{isActive==false?'active':''}}">买断计费</p>
+            </view>
+            <view class="Tabs_tex">
+                <view>
+                    <p>开始时间</p>
+                    <view>{{Mydata.startTime}}</view>
+                </view>
+                <view>
+                    <p>结束时间</p>
+                    <view>{{Mydata.endTime}}</view>
+                </view>
+                <view>
+                    <p>欢唱时间</p>
+                    <view>{{Mydata.songTime}}</view>
+                </view>
+                <view>
+                    <p>包厢金额</p>
+                    <view>￥{{Mydata.roomAmount}}</view>
+                </view>
+            </view>
+       </view>
+   </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="status-container">
+    <!-- end -->
+    <image class="status-ending" src="{{endingImgSrc}}" wx:if="{{isEnd&&!isEmpty&&!isLoading}}"></image>
+    <!-- empty -->
+    <image class="status-empty" src="{{emptyImgSrc}}" wx:elif="{{isEmpty&&!isEnd&&!isLoading}}"></image>
+    <!-- loading -->
+    <view class="loader kc-flex" wx:elif="{{isLoading&&!isEnd&&!isEmpty}}">
+        <view class="loader-inner pacman">
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+    </view>
+</view>

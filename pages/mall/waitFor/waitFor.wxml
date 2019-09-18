@@ -1,0 +1,58 @@
+<view class="main">
+    <view class="isbackground"></view>
+    <view class="isauto">
+        <view class="title">
+            <p class="waitFor_tex">酒水下单成功</p>
+            <span></span>
+            <span></span>
+            <span></span>
+        </view>
+        <view class="unpaid">
+            <view class="unpaid_tex">
+                <view class="top_tex">
+                    <p class="drinks_tex">酒水订单</p>
+                    <p class="icons"></p>
+                    <p class="room">{{roomname}}</p>
+                </view>
+                <scroll-view scroll-y style="height: 662rpx;">
+                   <!-- 外层包裹视图 -->
+                    <view class="cont">
+                        <!-- 列表 -->
+                        <view wx:for="{{data}}" wx:key="item" data-index='{{index}}' bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx"  class="list">
+                            <!-- 滑动删除 -->
+                            <view class="list_del txt">
+                                <image class="list_img" src="{{item.image}}"></image>
+                                <view class="goods">
+                                    <view>{{item.name}}</view>
+                                    <p>{{item.description}}</p>
+                                </view>
+                                <view class="fr_num">
+                                    <p>￥{{item.price}}</p>
+                                    <view class="add_num">
+                                        <span bindtap="minus" data-index="{{index}}"></span>
+                                        <p>{{item.count}}</p>
+                                        <span bindtap="add" data-index="{{index}}"></span>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="remove" bindtap="delItem"  data-index='{{index}}'>删除 </view>
+                        </view>
+                    </view>
+                </scroll-view>
+                <view class="total_tex">
+                    <p>共{{alldata.businessGoodsDTOS.length}}件</p>
+                    <!-- <span></span> -->
+                </view>
+                <view class="discount">
+                    <p>包厢折扣</p>
+                    <p>-￥0</p>
+                </view>
+                <view class="discount2">
+                    <p>实际需支付</p>
+                    <p>￥{{alldata.totalAmount}}</p>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button class="cancel_but" bindtap="cancel">取消下单</button>
+</view>

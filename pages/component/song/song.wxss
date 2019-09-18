@@ -1,0 +1,42 @@
+@import '../../../app.wxss';
+
+button::after {
+	width: 0;
+	height: 0
+}
+
+.item {
+    justify-content: space-between;
+    padding: 0 30rpx;
+    height: 130rpx;
+    border-bottom: 1px solid #ddd
+}
+
+.item .avatar {
+    flex-shrink: 0;
+    margin-right: 20rpx;
+    width: 75rpx;
+    height: 75rpx;
+    border-radius: 50% 50%
+}
+
+.item .btn-wrapper,
+.item .idx {
+    flex-shrink: 0
+}
+
+.item .info {
+    align-items: flex-start;
+    margin-left: 10rpx;
+}
+
+.item .info .songName,
+.item .info .singerName {
+    width: 100%
+}
+
+.item .info .singerName {
+    margin-top: 13rpx;
+    font-size: 26rpx;
+    color: #818181
+}

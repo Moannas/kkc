@@ -1,0 +1,31 @@
+<view class="index-singer-container">
+    <view class="header">
+        <view class="search kc-flex">
+            <view class="search-wrapper kc-flex">
+                <view class="icon-search"></view>
+                <input class="search-content {{isFocus? '':'search-content-default'}} kc-font-28" value="{{searchKeyword}}" type="text" placeholder="请输入歌星或歌名" placeholder-class="search-ph" confirm-type="search" bindconfirm="onSearchConfirm" bindinput="onSearchInput" bindfocus="onSearchFocus" bindblur="onSearchBlur" />
+            </view>
+            <view class="search-comfirm {{isFocus? '':'search-comfirm-default'}} kc-font-28" data-keyword="{{searchKeyword}}" bindtap="onSearchConfirm">
+                {{isFocus? '确定':''}}
+            </view>
+        </view>
+        <view class="tab">
+            <scroll-view scroll-x="true" class="scroll-wrapper">
+                <block wx:for="{{head_title}}" wx:key="">
+                    <view class="scroll-item">
+                        <view class="head-item {{index == head_selectedIdx ? ' active' : ''}} kc-font-30 kc-color-text" data-idx="{{index}}" bindtap="head_action">
+                            {{item}}
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <!-- <view class="list-wrapper {{isScroll? 'list-disScroll': ''}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> -->
+    <view class="list-wrapper">
+        <block wx:for="{{listData}}" wx:key="" wx:for-item="item">
+            <c-singer singerCover="{{item.frontCover}}" singerName="{{item.name}}" bind:goDetail="goDetail"></c-singer>
+        </block>
+        <c-status isLoading="{{statusData.isLoading}}" isEnd="{{statusData.isEnd}}" isEmpty="{{statusData.isEmpty}}"></c-status>
+    </view>
+</view>

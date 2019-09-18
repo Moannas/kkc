@@ -1,0 +1,20 @@
+<view class="item kc-flex">
+    <view class="kc-flex">
+        <image class="avatar" src="{{userAvatar == '' ? '../../../images/icons/headimg.png' : userAvatar}}" wx-if="{{selectedIdx == 0}}"></image>
+        <text class="idx kc-font-30" wx-if="{{selectedIdx != 0}}">{{songIdx}} .</text>
+        <view class="info kc-flex-reverse">
+            <text class="kc-font-30 songName">{{songName}}</text>
+            <view class="kc-flex singerBox">
+                <text class="tag" hidden="{{isScore == 0}}">评分</text>
+                <text class="singerName ">{{singerName}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="kc-flex btn-wrapper">
+        <view class="grade-wrapper" wx:if="{{isShowScore && isScore != 0}}">{{songScore}}<text class="grade-tag">分</text></view>
+        <button class="icon-size-operation icon-top" hidden="{{!isTop}}" hover-class="icon-top-active" disabled="{{isClicked}}" bindtap="topSong"></button>
+        <button class="icon-size-operation {{isSoundRecording == 0 ? 'icon-recording' : 'icon-recording-active'}}" wx:if="{{isNeedRecording}}" disabled="{{isClicked}}" bindtap="recordSong"></button>
+        <button class="icon-size-operation {{isAdd? 'icon-add' : isFavorite == false ? 'icon-new-col' : 'icon-new-col-active'}}" hover-class="{{isAdd ? 'icon-add-active' : 'none'}}" disabled="{{isClicked}}" bindtap="addSong"></button>
+        <button class="icon-size-operation {{isCol? 'icon-new-col' : 'icon-del'}}" hover-class="{{isCol? 'icon-new-col-active' : 'icon-del-active'}}" wx:if="{{isNeedAdd}}" disabled="{{isClicked}}" bindtap="colSong"></button>
+    </view>
+</view>

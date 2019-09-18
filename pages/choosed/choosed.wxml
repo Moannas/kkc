@@ -1,0 +1,30 @@
+<view class="choosed-container">
+    <view class="choosed head-tab kc-flex">
+        <block wx:for="{{head_title}}" wx:key="">
+            <view class="head-item {{index == selectedData.head_selectedIdx ? ' choose-active' : 'choose-no'}} kc-font-30 kc-color-text" data-idx="{{index}}" bindtap="head_action">{{item}}</view>
+        </block>
+    </view>
+     <view class="icon-music">
+       <view class="icon-playing">
+         <view class="icon-line1"></view>
+         <view class="icon-line2"></view>
+         <view class="icon-line3"></view>
+         <view class="icon-line4"></view>
+       </view>
+       <view wx:if="{{acplayed}}" class="song-word">
+         正在播放：{{playedSongs.songName}}— —{{playedSongs.singerName}}
+       </view>
+       <view wx:else class="song-word">
+          当前无正在播放歌曲,快去点歌吧
+       </view>
+     </view>
+     <view class="choose-block"></view>
+    <view class="choosed-list">
+        <block wx:for="{{listData}}" wx:key="" wx:for-item="item" wx:for-index="idx">
+            <c-songs class="choose-style" songIdx="{{idx + 1}}" songId="{{item.id}}" songCode="{{item.code}}" songName="{{item.name}}" singerName="{{item.singer}}" songKey="{{item.redisSongsKey}}" userAvatar="{{item.avatarurl == null? '' : item.avatarurl}}" isFavorite="{{item.favorite}}" isNeedRecording="{{selectedData.isNeedRecording}}" isNeedAdd="{{selectedData.isNeedAdd}}" isSoundRecording="{{item.isSoundRecording}}" isShowScore="{{selectedData.isShowScore}}" isScore="{{item.isGrade}}" songScore="{{item.grade}}" isCol="{{selectedData.isCol}}" isAdd="{{selectedData.isAdd}}" isTop="{{selectedData.isTop}}" isClicked="{{isClicked}}" selectedIdx="{{selectedData.head_selectedIdx}}"  bind:operatingSong="operatingSong"></c-songs>
+        </block>      
+        <c-status isLoading="{{statusData.isLoading}}" isEnd="{{statusData.isEnd}}" isEmpty="{{statusData.isEmpty}}"></c-status>
+    </view>
+    <!-- 遥控器 -->
+    <c-console bind:goConsole="goConsole"></c-console>
+</view>

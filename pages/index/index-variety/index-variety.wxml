@@ -1,0 +1,6 @@
+<view class="index-album-container">
+    <block wx:for="{{listData}}" wx:key="" wx:for-item="item">
+        <c-singer singerCover="{{item.image}}" singerName="{{item.varietyName}}" singerId="{{item.id}}" bind:goDetail="goDetail"></c-singer>
+    </block>
+    <c-status isLoading="{{statusData.isLoading}}" isEnd="{{statusData.isEnd}}" isEmpty="{{statusData.isEmpty}}"></c-status>
+</view>

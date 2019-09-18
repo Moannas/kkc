@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "c-status": "../component/status/status",
+        "c-song": "../component/song/song",
+        "c-console": "../component/console/console"
+    }
+}

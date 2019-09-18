@@ -1,0 +1,73 @@
+@import '../../../app.wxss';
+
+button::after {
+	width: 0;
+	height: 0
+}
+
+.item {
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin: 20rpx 30rpx;
+    width: 690rpx;
+    height: 130rpx;
+    padding: 0 25rpx;
+    border-bottom: 1rpx solid #ddd;
+    box-shadow:0rpx 3rpx 5rpx 0rpx rgba(0, 0, 0, 0.2);
+    border-radius:10rpx;
+}
+
+.avatar {
+    flex-shrink: 0;
+    margin-right: 20rpx;
+    width: 75rpx;
+    height: 75rpx;
+    border-radius: 50% 50%
+}
+
+.item .btn-wrapper,
+.item .idx {
+    flex-shrink: 0
+}
+
+.item .info {
+    align-items: flex-start;
+    margin-left: 10rpx;
+}
+
+.item .info .singerBox {
+    width: 100%
+}
+
+.item .info .songName,
+.item .info .singerName {
+    width: 100%
+}
+
+.item .info .singerName {
+    margin-top: 13rpx;
+    font-size: 26rpx;
+    color: #818181
+}
+
+.item .info .tag {
+    margin: 13rpx 11rpx 0 0;
+    width: 46rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+    font-size: 15rpx;
+    color: #FFB300;
+    text-align: center;
+    border: 1px solid #FFB300
+}
+
+.item .btn-wrapper .grade-wrapper {
+    margin-right: 14rpx;
+    font-size: 42rpx;
+    color: #FFBF36
+}
+
+.item .btn-wrapper .grade-tag {
+    font-size: 24rpx;
+    color: #FFBF36
+}

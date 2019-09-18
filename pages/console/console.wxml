@@ -1,0 +1,24 @@
+<view class="console-container">
+    <view class="options kc-flex">
+        <block wx:for="{{optionsData}}" wx:key="">
+            <view class="op-item kc-flex-reverse">
+                <button class="icon-options {{item.class}}" hover-class="{{item.hoverClass}}" data-id="{{item.id}}" bindtap="optionsTap"></button>
+                <text class="kc-font-28">{{item.title}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="kc-line-16"></view>
+    <view class="volume kc-flex">
+        <block wx:for="{{volumeData}}" wx:key="">
+            <view class="vol-item kc-flex-reverse">
+                <button class="icon-vol {{item.upClass}}" hover-class="{{item.upHoverClass}}" data-id="{{item.id}}" data-type="up" bindtap="volumeTap"></button>
+                <button class="icon-vol {{item.downClass}}" hover-class="{{item.downHoverClass}}" data-id="{{item.id}}" data-type="down" bindtap="volumeTap"></button>
+                <text class="kc-font-28">{{item.title}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="calling kc-flex">
+        <view class="icon-calling" bindtap="callingService"></view>
+    </view>
+    <view class="icon-close" animation="{{animationData}}" bindtap="closeConsole"></view>
+</view>

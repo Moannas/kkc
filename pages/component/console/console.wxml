@@ -1,0 +1,1 @@
+<view class="icon-options icon-console" animation="{{animationData}}" bind:tap="goConsole"></view>

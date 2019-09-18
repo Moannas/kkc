@@ -1,0 +1,7 @@
+<view class="item kc-flex" bindtap="goDetail" data-name="{{singerName}}" data-id="{{singerId}}">
+    <image class="cover" src="{{singerCover}}"></image>
+    <view class="content kc-flex">
+        <text class="name kc-font-28">{{singerName}}</text>
+        <view class="nav-right"></view>
+    </view>
+</view>

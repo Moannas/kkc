@@ -1,0 +1,169 @@
+page,.main{
+    background: #EFEFEF;
+    width: 100%;
+    height: 100%;
+    font-family:"PingFang-SC-Bold";
+}
+.isauto{
+    position: fixed;
+    top: 0;
+    left: 30rpx;
+    width: 690rpx;
+    height: 100%;
+    background: none;
+    overflow-y: scroll;
+}
+.isauto::-webkit-scrollbar {
+    display: none;
+}
+.top{
+    margin: 29rpx 0;
+    background: none
+}
+.top p{
+    font-size:28rpx;
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    line-height:40rpx;
+}
+.top_icon{
+    width: 149rpx;
+    height: 45rpx;
+    border-radius: 22rpx;
+    background: #F1F1F1;
+    border: 1rpx solid #E0E0E0;
+    float: right;
+    font-size:20rpx;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.top_icon span{
+    margin-right: 7rpx;
+    width: 30rpx;
+    height: 30rpx;
+    background-size: cover;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAABU1BMVEVHcEzNzc3Ly8vMzMzKysrPz8/MzMzMzMzMzMzLy8vMzMzLy8vMzMzMzMzMzMzMzMzMzMzMzMzNzc3MzMzJycnMzMzLy8vR0dHMzMzMzMzMzMy/v7/Nzc3MzMzIyMjMzMzMzMzMzMzMzMzKysrMzMzMzMzMzMzLy8vMzMzMzMzMzMzMzMzMzMzOzs7MzMzNzc3MzMzU1NT////MzMzMzMzMzMzLy8vIyMjMzMzMzMzMzMzJycnMzMzMzMzMzMzLy8vMzMzPz8/Ozs7MzMzNzc3Pz8/Nzc3MzMzMzMzLy8vMzMzLy8vQ0NDMzMzMzMzMzMzLy8vGxsbMzMzMzMzLy8vNzc3MzMzMzMzMzMzS0tLNzc3MzMzMzMzNzc3MzMzMzMzMzMzMzMyqqqrNzc3Ly8vMzMzLy8vMzMzMzMzNzc3GxsbMzMzLy8vMzMzMzMzMzMzMzMxW9HnJAAAAcHRSTlMAYCKQMBBQoPCA7SfUc/Ru/Osu+iEFwQv7wv0IrIIO/tn3lRjT8g+Pmt0Ui+Iv4ymlBgF83pt7F+jJdxNtkWhn5CA0HiQlVy3srb2yG6nQGUkSjWlejojlfhGE+XinfdbVdAN/y1VP0UZwCeY2zrQyrRIGMAAAAWRJREFUSMftl1VzwkAUhQOlTQnBpTjU3V2pu7u76/3/T93bnUzTsruBPNFpztMH53xDSGAIkvQr3bnYIuRFiU2EJcPMXQInqt3I3XgBbtoGDeQlEKRL7Nq/RhE5LxF8PrMqlHdw42Q1KWxsQnkfJ1WsphabXqFchhN2xT2mPyinU7orcoETmRls1nWPb/C8voPJJImcMSv7iJw1Kz8Q+eOt0lSGA9I/z1br2aPGLSOHUxqHjk+PNH5tdCeY8jJAfJritQow1EB51A9w20M5EARYY7kJvHYDlDuRNynPI7sonxOMs+Ry3SffgVxB2YbsoOzkfW8s2ZIt2ZItuWTkXeSFIuR09fevRDtBz3MRsnTXfODVCvdk9l4qRuakBOUwFuNiuZ9MosymgzT+GeH/AIVM+phVE750fVLmZsWDixqm7PIVct8XnWUf1VUhspf3np6CRurJmOCM7KkK/25TqdsO/dx/Avx7t1c/7EtpAAAAAElFTkSuQmCC");
+}
+.order-item {
+    height: 317rpx;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 20rpx;
+    border-radius: 5rpx
+}
+  
+ .order-item .remove{  
+    width: 91rpx;  
+    height: 100%;  
+    background: red!important; 
+    color: white; 
+    position: absolute;  
+    top: 0;  
+    right: -91rpx;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    overflow: visible!important;
+    font-size: 24rpx
+}  
+.content{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    margin:30rpx  20rpx 20rpx 51rpx;
+}
+.title span:nth-child(1){
+    float: left;
+    font-size:28rpx;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:40rpx
+}
+.title span:nth-child(2){
+    float: right;
+    font-size:28rpx;
+    font-weight:bold;
+    color:rgba(140,140,140,1);
+    line-height:40rpx;
+}
+.beginTimer,.overTimer{
+    margin:0 0 22rpx 50rpx;
+}
+.beginTimer span,.overTimer span{
+    display: inline-block;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    border: 1rpx solid #3259FA;
+    margin-right: 29rpx
+}
+.beginTimer p,.overTimer p{
+    font-size:28rpx;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:40rpx
+}
+.overTimer span{
+    border: 1rpx solid #FE7100;
+}
+.Monetary{
+    margin: 0 20rpx 0 40rpx;
+    border-top: 1rpx solid #ccc;
+    padding-top: 21rpx;
+
+}
+.Monetary span{
+    float: right;
+    color: #fff;
+    font-size: 24rpx;
+    background: #2C62FE;
+    padding: 15rpx 20rpx;
+    border-radius: 28rpx
+}
+.Monetary p{
+    font-size:30rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    margin-top:20rpx 
+}
+/* 没有数据 */
+.nolist{
+    float: left;
+    margin-top: 40rpx;
+    width: 400rpx;
+    height: 678rpx;
+    background: #fff;
+    border-radius: 15rpx;
+    padding: 177rpx 145rpx 0 145rpx;
+    text-align: center;
+    color: #999999;
+}
+.nolist image{
+    width: 400rpx;
+    height: 326rpx;
+    margin-bottom:122rpx; 
+}
+.nolist view:nth-child(2){
+    font-size: 30rpx;
+    margin-bottom:20rpx ;
+    color: #999999;
+}
+.nolist view:nth-child(3){
+    font-size:24rpx;
+    color: #999999;
+}
+
+
+
+
+
+
+
+
+

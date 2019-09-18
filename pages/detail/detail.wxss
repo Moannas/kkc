@@ -1,0 +1,21 @@
+button {
+    margin: 0
+}
+
+button::after {
+    width: 0;
+    height: 0
+}
+
+button[disabled][type="default"],
+wx-button[disabled]:not([type]) {
+    background-color: #fff !important
+}
+
+.detail-container {
+    margin-top: 2px;
+}
+
+.item:first-child {
+    border: 0
+}

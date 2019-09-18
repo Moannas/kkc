@@ -1,0 +1,15 @@
+<import src="../../template/tl-banner/tl-banner.wxml" />
+<view class="index-album-container">
+    <!-- banner -->
+    <template is="tl-banner" data="{{bannerData}}" />
+    <view class="kc-line-16"></view>
+    <!-- Grid -->
+    <view class="grid kc-flex">
+        <block wx:for="{{albumData}}" wx:key="">
+            <view class="item kc-flex-reverse" data-id="{{item.id}}" bindtap="goDetail">
+                <image class="cover" src="{{item.img}}"></image>
+                <text class="kc-font-28 kc-color-text">{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+</view>

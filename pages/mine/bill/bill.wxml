@@ -1,0 +1,51 @@
+<view class="main">
+    <view class="isbackground"></view>
+    <view class="isauto">
+        <view class="unpaid">
+            <view class="top_tex">
+                <p>{{Mydata.roomName}}</p>
+            </view>
+            <view class="unpaid_tex">
+                <view class="total_tex">
+                    <p class="tex_p1">本次消费总金额</p>
+                    <view class="totalMoney">￥{{Mydata.billAmount}}</view>
+                    <view wx:if="{{nowAmdOver}}">
+                        <image src="../../../images/bill.png"></image>
+                        <p class="tex_p2">{{Mydata.states==0?"账单待支付":"账单已支付"}}</p>
+                    </view>
+                    <view class="later" bindtap="isclose" wx:else>
+                        <view>确定结算会关闭K房，请前往前台买单或者呼叫客服结算</view>
+                        <button>{{nowAmdOver==true?"结算":"确定结算"}}</button>
+                    </view>
+                    <view class="private_room">
+                        <p>包房费用</p>
+                        <p>{{Mydata.singAmount}}</p>
+                        <i wx:if="{{isshow}}"></i>
+                        <span  wx:if="{{isshow}}" bindtap="boxDetailed">查看明细</span>
+                    </view>
+                   <view class="private_room">
+                        <p>酒水费用</p>
+                        <p>{{Mydata.goodsAmount}}</p>
+                        <i wx:if="{{isshow}}"></i>
+                        <span  wx:if="{{isshow}}" bindtap="ToDrinks">查看明细</span>
+                    </view>
+                    <view class="timer">
+                        <p>开始时间</p>
+                        <p>{{Mydata.startTime}}</p>
+                    </view>
+                    <view class="timer">
+                        <p>结束时间</p>
+                        <p>{{Mydata.endTime}}</p>
+                    </view>
+                    <view class="check" bindtap="history" wx:if="{{isshow}}">查看历史账单</view>
+                </view>
+            </view>
+            <span class="dian1"></span>
+            <span class="dian2"></span>
+            <span class="dian3"></span>
+            <span class="dian4"></span>
+            <span class="dian5"></span>
+            <span class="dian6"></span>
+        </view>
+    </view>
+</view>

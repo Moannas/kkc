@@ -1,0 +1,39 @@
+<!--share.wxml-->
+<import src="../../template/Bar-template/Bar-template.wxml" />
+<view class="container">
+  <!--当前为停止状态  -->
+ <view class="progressBar">
+    <template is="Bar-template" data="{{nowvalue,alltimer}}"/>
+  </view>
+  <view class="imgs">
+    <view class="cd_img">
+			<image class="{{isplay==true ?'cd2':'cd'}}" animation="{{animationData}}" src="../../../images/img-new-cd.png" />
+		</view>
+    <image src="../../../images/begin.png" class="minimg"></image>
+    <image src='../../../images/back3.png' class="back3"></image>
+		<image src='../../../images/back4.png' class="back4 {{isplay == false?'pause-needle':'resume-needle'}}"></image>
+  </view>
+  <image src='../../../images/back1.png' class="back1"></image>
+  <view class="button">
+    <p class="tex">{{data.songName}}</p>
+    <!-- <view class="grade">
+      得分 <span>98</span>分，击败全国<span>95</span>%的人
+    </view> -->
+    <view class="Like">
+      <view>
+        <image src="{{isshow==true?'../../../images/erjiicon.png':'../../../images/fenxiang.png'}}" class="erjiicon"></image>
+        <button class="listen" open-type="share">{{isshow==true?data.playedTimes:"分享"}}</button>
+      </view>
+      <view bindtap="like">
+        <image src="{{isshow==true?'../../../images/xinaixin.png':'../../../images/icons/xingxing.png'}}" class="xinaixin"></image>
+        <span class="good">{{isshow==true?data.likeTimes:"收藏"}}</span>
+      </view>
+    </view>
+    <view class="sharebutton">
+      <view class="stopbutton"  bindtap="play">
+        <image src='../../../images/yuan1.png' class="yuan1"></image>
+        <image src='{{isplay==true ? "../../../images/stop.png":"../../../images/san.png"}}' class="stop"></image>
+      </view>
+    </view>
+  </view>
+</view>

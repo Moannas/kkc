@@ -1,0 +1,39 @@
+
+<view class="main">
+    <view class="isbackground"></view>
+    <view class="ispadding">
+        <scroll-view class="scroll" scroll-y style="height: 100%;">
+            <p class="title">我的录音</p>
+            <view class="hint">
+                <span class="icon"></span>
+                <span>此处显示，已在TV端点唱录音并微信分享或收藏的歌曲</span>
+            </view>
+            <!-- 有数据时 -->
+            <view class="have" wx:if="{{noList}}">
+                <view wx:for="{{isdata}}" wx:key="item" data-index='{{index}}'>
+                    <view class="isfl {{item.songsGrade == 1 ?'':'flex'}}" bindtap="toPlay" data-index="{{item.id}}">
+                        <p class="song">{{item.songName}}</p>
+                        <view>
+                            <span class="grade" wx:if="{{item.songsGrade==1}}">评分</span>
+                            <span class="name">{{item.singerName}}</span>
+                            <span class="timer">{{item.duration/60|Int}}分{{item.duration%60|Int}}秒</span>
+                        </view>
+                    </view>
+                    <view class="isfr">
+                        <span class="num" wx:if="{{item.songsGrade==1}}">95分</span>
+                        <button class="but1" bindtap="addsong" data-index="{{item}}"></button>
+                        <button class="but2" data-index="{{item.id}}" bindtap="share" open-type="share"></button >
+                        <button class="but3" bindtap="delesong" data-index="{{item.id}}"></button>
+                    </view>
+                </view>
+            </view>
+            <!-- 没有数据时 -->
+            <view class="nolist" wx:else>
+                <image src="../../../images/nolist.png"></image>
+                <view>这里什么也没有</view>
+                <view>请在TV端点唱录音并分享或收藏</view>
+            </view>
+        </scroll-view>
+    </view>
+    
+</view>

@@ -1,0 +1,15 @@
+@import "../index-singer/index-singer.wxss";
+
+.header {
+    height: 94rpx !important;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ddd
+}
+
+.scroll-item:nth-child(n+2) {
+    margin-left: 57rpx;
+}
+
+.head-item {
+    padding: 0 10rpx
+}

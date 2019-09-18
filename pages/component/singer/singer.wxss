@@ -1,0 +1,46 @@
+@import '../../../app.wxss';
+
+.item {
+    justify-content: flex-start;
+    padding: 0 30rpx;
+    height: 104rpx
+}
+
+.cover {
+    flex-shrink: 0;
+    margin-right: 26rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 80rpx
+}
+
+.content {
+    justify-content: space-between;
+    padding-left: 4rpx;
+    width: 100%;
+    height: 103rpx;
+    border-bottom: 1px solid #e3e3e3
+}
+
+.nav-right {
+    display: inline-block;
+    position: relative;
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 8rpx;
+}
+
+.nav-right::after {
+    display: inline-block;
+    content: "";
+    height: 16rpx;
+    width: 16rpx;
+    border-width: 2rpx 2rpx 0 0;
+    border-color: #000;
+    border-style: solid;
+    transform: matrix(0.70, 0.70, -0.70, 0.70, 0, 0);
+    position: absolute;
+    top: 50%;
+    right: 6rpx;
+    margin-top: -9rpx;
+}

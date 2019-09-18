@@ -1,0 +1,16 @@
+<view class="index-movie-container">
+    <view class="list">
+        <block wx:for="{{thirdpartAppList}}" wx:key="">
+            <view class="item" data-id="{{item.id}}" bindtap="openThirdpartApp">
+                <image class="cover" src="/images/rank_kuaichang.png" />
+                <view class="content kc-flex">
+                    <image class="cover-app" src="{{item.icon}}" />
+                    <view class="introduction kc-flex-reverse">
+                        <text class="title">{{item.name}}</text>
+                        <text class="detail">{{item.version}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

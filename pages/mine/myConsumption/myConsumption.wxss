@@ -1,0 +1,159 @@
+.main,.mine-container {
+    background: none
+}
+.top {
+    width: 100%;
+    height: 440rpx;
+    background: linear-gradient(to right, #d80af9, rgb(50, 12, 243) 100%);
+    position: relative;
+}
+.centre {
+    text-align: center;
+    background: none;
+}
+.head {
+    width: 162rpx;
+    height: 162rpx;
+    border-radius: 50%;
+    background: #c987fc;
+    margin: 34rpx auto 12rpx auto;
+    position: relative;
+}
+.head image {
+    width: 150rpx;
+    height: 150rpx;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-img {
+    overflow:hidden;  
+    display: block; 
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nick-name {
+    font-size: 28rpx;
+    color: #fff
+}
+.name {
+    font-size: 28rpx;
+    color: #fff;
+}
+.roomviewnk{
+    margin-top: 10rpx;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.tex {
+    font-size: 24rpx;
+    color: #cea6fc;
+    margin-right: 10rpx
+}
+.texroom {
+    font-size: 36rpx;
+    color: #ffffff;
+}
+.link {
+    width: 44rpx;
+    height: 19rpx;
+    display: inline-block;
+    margin-left: 18rpx;
+}
+.nolink{
+    width: 44rpx;
+    height: 45rpx;
+}
+.top_bottom{
+    width: 100%;
+    height:115rpx ;
+    margin-top:22rpx;
+    background: none;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center
+}
+.top_bottom view{
+    background: none;
+    color: #fff;
+ }
+.top_bottom .black_background{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.top_bottom>view{
+   float: left;
+   color: #fff;
+   background: none;
+}
+.top_bottom .width2{
+    width: 3rpx;
+    height: 47rpx;
+    background: #ffffff;
+}
+.ismoney,.istimer,.begintimer{
+    flex:1
+}
+.font_size28{
+    font-size: 28rpx;
+}
+.font_size20{
+    font-size: 20rpx;
+    margin-top: 10rpx;
+}
+.bottom{
+    padding: 18rpx 15rpx;
+    text-align: center;
+    background: none
+}
+.bottom>view{
+    width: 330rpx;
+    height: 280rpx;
+    background: #fff;
+    margin: 12rpx 15rpx;
+    float: left;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+    font-family:"PingFang-SC-Medium";
+    font-weight:500;
+    color: #030139
+}
+.bottom .settle_accounts{
+    background: linear-gradient(to right, #942DF0, #CD56FF 100%);
+    color: #fff;
+}
+.bottom image{
+    width: 180rpx;
+    height: 180rpx;
+    display: block;
+    margin: 30rpx auto 17rpx auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

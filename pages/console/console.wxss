@@ -1,0 +1,30 @@
+page {
+    background-color: #fff
+}
+
+.console-container {
+    margin-top: 10rpx
+}
+
+.options {
+    justify-content: space-around;
+    padding: 0 48rpx;
+    height: 306rpx
+}
+
+.op-item-15 {
+    margin-left: 15rpx
+}
+
+.volume {
+    justify-content: space-between;
+    padding: 82rpx 112rpx
+}
+
+.vol-item text {
+    margin-top: 40rpx
+}
+
+.calling {
+    width: 100%
+}

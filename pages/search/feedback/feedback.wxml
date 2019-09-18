@@ -1,0 +1,99 @@
+<view class="feedback">
+    <view data-feed="0" bindtap="feedBack" class="{{feeds == '0' ? 'feed-active1' : 'feed-box1'}}">缺歌反馈</view>
+    <view data-feed="1" bindtap="feedBack" class="{{feeds == '1' ? 'feed-active2' : 'feed-box2'}}">建议及意见</view>
+    <view hidden="{{feeds != '0'}}" class="feed-cont1">
+      <image class="feed-bg" src="/images/feed-bg.png"  />
+      <image class="feed-logo" src="/images/feed-logo.png" />
+      <view class="form">
+          <view class="form-li">
+             <view>歌名</view>
+             <input 
+             placeholder="请输入歌曲名称" 
+             value="{{song}}" 
+             bindblur="getValue"
+             maxlength="50"
+             type="text"
+             data-type="0"
+             />             
+          </view>
+          <view class="form-li">
+             <view>歌手</view>
+             <input 
+             placeholder="请输入歌手名称" 
+             value="{{singer}}" 
+             bindblur="getValue"
+             maxlength="50"
+             type="text"
+             data-type="1"
+             />             
+          </view>
+          <view class="form-li">
+             <view>手机</view>
+             <input placeholder="请留下您的联系方式，我们好及时反馈" 
+             value="{{phone}}" 
+             bindblur="getValue"
+             type="number"
+             maxlength="11"
+             data-type="2"
+             />             
+          </view>
+          <view class="form-li">
+             <view>留言</view><br/>
+             <textarea 
+             placeholder="还有什么话告诉我们~"
+             maxlength="200"
+             value="{{leaveword}}"
+             type="text"
+             bindinput="getValue"
+             data-type="3"
+             />             
+          </view>
+          <button 
+          class="feed-submit"
+          hover-class="hover"
+          bindtap="submitInfo"
+          type="text"
+          disabled="{{isSubmit}}"
+          >提交信息</button>
+            
+      </view>
+    </view>
+    <view hidden="{{feeds != '1'}}" class="feed-cont2">
+       <image class="suggest" src="/images/suggest.png"></image>
+       <image class="suggest-logo" src="/images/suggest-logo.png"></image>
+       <view class="suggest-cont">
+         <view class="sugg-style">意见类型</view>
+         <view class="sugg-tab">
+             <view bindtap="suggToggle" data-sugg="1" class="{{suggs == '1' ? 'stab' : 'stab-active'}}">界面</view>
+             <view bindtap="suggToggle" data-sugg="2" class="{{suggs == '2' ? 'stab' : 'stab-active'}}">功能</view>
+             <view bindtap="suggToggle" data-sugg="3" class="{{suggs == '3' ? 'stab' : 'stab-active'}}">其他</view>
+         </view>
+         <view class="sugg-border">
+             <view>意见或建议</view>
+             <textarea 
+             placeholder="我们期待着您的建议及意见"
+             type="text"
+             maxlength="200"
+             value="{{suggcontent}}"
+             bindblur="getsuggest"
+              />
+         </view>
+         <view class="upload">上传图片</view>
+         <view class="upload-icon" bindtap="chooseimg">
+           <view class="upload-img"></view>
+         </view>
+            <image class="chooseimg" wx:for="{{img}}"  wx:key="index" src="{{item}}">
+              <view bindtap="deleteimg" data-id="{{index}}" class="imgdelete"></view>
+            </image>
+             
+         
+         <button
+          class="feed-submit"
+          hover-class="hover"
+          bindtap="submitsuggest"
+          disabled="{{issubmitsugg}}"
+         >提交信息</button>
+       </view>
+    </view>
+</view>
+  

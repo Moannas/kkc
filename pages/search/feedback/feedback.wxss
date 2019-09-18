@@ -1,0 +1,311 @@
+page{
+    width: 100%;
+    height: 100%;
+}
+.feedback{
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+.feed-box1{
+    position: fixed;
+    top: 30rpx;
+    left: 125rpx;
+    width:240rpx;
+    height:55rpx;
+    z-index: 1000;
+    text-indent: 3em;
+    line-height: 55rpx;
+    background:rgba(255,255,255,1);
+    opacity:0.6;
+    border-radius:28rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#555;
+}
+.feed-box2{
+    position: fixed;
+    top: 30rpx;
+    left: 325rpx;
+    width: 297rpx;
+    height:55rpx;
+    z-index: 1000;
+    text-indent: 3em;
+    line-height: 55rpx;
+    background:rgba(255,255,255,1);
+    opacity:0.6;
+    border-radius:28rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#555;
+}
+.feed-active1{
+    position: fixed;
+    top: 30rpx;
+    left: 125rpx;
+    width:240rpx;
+    z-index: 1000;
+    height:55rpx;
+    text-indent: 3em;
+    line-height: 55rpx;
+    background:rgba(255,255,255,1);
+    opacity: 1;
+    border-radius:28rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#811FEB;
+}
+.feed-active2{
+    position: fixed;
+    top: 30rpx;
+    left: 325rpx;
+    width: 297rpx;
+    z-index: 1000;
+    height:55rpx;
+    text-indent: 3em;
+    line-height: 55rpx;
+    background:rgba(255,255,255,1);
+    opacity: 1;
+    border-radius:28rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#811FEB;
+}
+
+
+/* 显示的内容 */
+.feed-cont1{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+}
+.feed-bg{
+    width: 100%;
+    height: 440rpx;
+    position: relative;
+}
+.feed-logo{
+    position: absolute;
+    top: 113rpx;
+    left: 56rpx;
+    z-index: 1200;
+    width: 643rpx;
+    height: 305rpx;
+}
+.form{
+    width: 100%;
+    overflow: hidden;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.form-li{
+    width:100%;
+    height: 89rpx;
+    margin-top: 30rpx;
+    background:rgba(238,238,238,1);
+    border:2px solid rgba(216,216,216,1);
+    opacity: 0.6;
+    border-radius:10px;
+    display: flex;
+}
+.form-li view{
+    background: none;
+    flex: 1;
+    margin-left: 20rpx;
+    height: 89rpx;
+    line-height: 89rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#000;
+}
+.form-li input{
+    flex: 9;
+    background: none;
+    font-size:28rpx;
+    height: 89rpx;
+    line-height: 89rpx;
+}
+.form-li:nth-child(4){
+    height: 200rpx;
+    box-sizing: border-box;
+    margin-bottom: 20rpx;
+    padding-right: 10rpx;
+    flex-direction: column;
+}
+.form-li:nth-child(4) view{
+    flex: 5;
+    margin-bottom: 10rpx;
+   
+}
+.form-li:nth-child(4) textarea{
+    flex: 7.5;
+    margin-left: 20rpx;
+    font-size:28rpx;
+}
+.feed-submit{
+    width: 90%;
+    height:88rpx;
+    background:linear-gradient(0deg,rgba(94,34,234,1),rgba(120,45,228,1));
+    border-radius:10rpx;
+    color: #fff;
+}
+.hover{
+    width: 90%;
+    height:88rpx;
+    background:linear-gradient(0deg,rgba(94,34,234,1),rgba(120,45,228,1));
+    border-radius:10rpx;
+    opacity: 0.8;
+    color: #fff;
+}
+
+
+
+/*建议及意见*/
+.feed-cont2{
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+.suggest{
+    width: 100%;
+    height: 440rpx;
+    position: relative;
+}
+.suggest-logo{
+    width:506rpx;
+    height:125rpx;
+    position: absolute;
+    top: 204rpx;
+    left: 122rpx;
+}
+.suggest-cont{
+    width: 100%;
+    background: #fff;
+}
+.sugg-style{
+    width:130rpx;
+    text-align: center;
+    height:30rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height:30rpx;
+    margin-left: 43rpx;
+    margin-top: 40rpx;
+    margin-bottom: 20rpx;
+}
+.sugg-tab{
+    width: 100%;
+    height: 60rpx;
+}
+.stab{
+    display: inline-block;
+    width:200rpx;
+    height:54rpx;
+    line-height: 54rpx;
+    background:linear-gradient(90deg,rgba(252,100,214,1),rgba(192,0,255,1));
+    border-radius:27rpx;
+    text-align: center;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    margin-left: 36rpx;
+}
+.stab-active{
+    display: inline-block;
+    width:200rpx;
+    height:54rpx;
+    text-align: center;
+    line-height: 54rpx;
+    background:rgba(244,221,255,1);
+    border-radius:27rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(0,0,0,1);
+    margin-left: 35rpx;
+}
+.sugg-border{
+    width:90%;
+    height:220rpx;
+    background:rgba(238,238,238,1);
+    border:2rpx solid rgba(216,216,216,1);
+    opacity:0.44;
+    border-radius:10rpx;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+.sugg-border view{
+    height:30rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#000;
+    line-height:30rpx;
+    margin-left: 20rpx;
+    margin-top: 30rpx;
+    background: rgba(238,238,238,1);
+}
+.sugg-border textarea{
+    font-size:28rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    background: rgba(238,238,238,1);
+}
+.upload{
+    height:30rpx;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height:30rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+}
+.upload-icon{
+    float: left;
+    width:100rpx;
+    height:100rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    background:rgba(255,255,255,1);
+    border:2rpx solid rgba(216,216,216,1);
+    border-radius:10rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    margin-bottom: 50rpx;
+}
+.upload-img{
+    width: 55rpx;
+    height: 45rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAtCAMAAAA9SAOJAAAAUVBMVEUAAAC+vr69vb2zs7O5ubm+vr69vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb2+vr69vb29vb29vb29vb28vLyywuYZAAAAG3RSTlMA8foIEZhw4nvqryC9QKFKzl8qiMY4WlIy1Wg5k4N9AAABwElEQVRIx8XV7c6aQBCG4Z1nBme/2RcoiOd/oNVKijbsvpK06f2POBdqArNmT2yhVuXG5qikQIMB5XrE2BK8redBF34ZD9cfj659hCaulxSx32YDm8XrFuDF1BMP6JbvzQS4rXXmhuOv1W0BkyHE2/z1q15MK+mfY/Mtgu6uE35mvoufSbc5c65/4/jRSccS0nyxlzkF4Y8dy9JN6ojI6dT1u2w7WbwCTteyqgPUL/KJC6OCyjin63BNX10h6Bi+dyETVjsIbz95sCsoh5rbGeATmz1OHsih7WQk5MG8N2TQKE3XK+LGXmGE9i0n+XXg7XZZGi7p/er4CdFUd2xJFz5wvChZrjrJKIM5aijIUnUhwkttScRQd1PDTeFvf9/+6d7rHetuJE2VXU5j3fGsZPl4l+vMVWdCPD4EruXxB+qOb+7l8nXQ3bjhTPBwVv5k1sGH9vuXJqgNbyxYxZRM23FfQDkJ/95RKRNKzzW3w0jQbh7kUVg6BcWdVZ3hYVTArT532RcFdBz4o/0paSyO8IhcGZN8vK9lWGz20We7DHLqfGCWR4cnxH87x/hcm5vs5Vx2ursI0NmAaHrvTjvn+58djRqQ9jGCDQAAAABJRU5ErkJggg==) no-repeat;
+    background-size: contain;
+    margin-left: 23rpx;
+    margin-top: 28rpx;
+}
+
+.chooseimg{
+    float: left;
+    width: 120rpx;
+    height: 130rpx;
+    margin-left: 50rpx;  
+    position: relative;
+}
+.imgdelete{
+    position: absolute;
+    top: 2rpx;
+    right: 2rpx;
+    width: 23rpx;
+    height: 20rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAUCAMAAABRYFY8AAABmFBMVEUAAAD9//+9ERG2fX3s4+Px8O/z8/P29vafEhKvDg7DGRmqPz+fQUDFNja2Skq+g4PWlpbgr7Dhv7/qysrn2tns09T19PP7/f2gDAy7Dg6ZFBWZGBibHx/DIB/DJSegLy6vLS2iQD+4NzjFOzzESkqvRkjMUVK2ZmfQcnG6goHHhYXQj4/fpqfct7jjxMTd2Nfg2trt7e349vb8///GAAC2AAChAADDAAC5AACzAACyAACuAACjAADCAQHAAAC9AACrAAD0/f3t7e3z///y9vfw8vPu8O/w7++7AACmAACgAACdAACbAACWAAD4///t9vfz9fTiyMfivLuqGhvKAADIAAC0AAClAAD2/Pv1+Pjv9vbv8fHq6Ojw5OLu29vj0tPfwcDZl5XPhobJbW3RZmbANDOzJyizGhrBDg+mCwyxAACoAAD8///1/v/q1NTp1NLozMvhvr/jpKTgpKPXionKgIDKdHPEcG7SYGHPVlW+TEvATErOSkqtJSapIiKlIiLAHx6vFheqFhaUDQ28DAyvBgWzAwLAAQC1H0sCAAAANHRSTlMABP2uMiAcFf399vPh3Nure2JURjk3GQv9+fj28/Lv5eLb1dPRzcWvpqSjkG1cTUxGKRII4Zh5QQAAAWFJREFUGNNV0WVzwkAQBuDiri3U3d1CEiBCgrsVdy1Sd3f52z0CDGW/3XMze7vvDXRrWKPaUGn2B/pLoJwTNfS60Xnl3n/emomZjAaDDnU4ZIM93hzBWq5vOcFWd3lI6Pp4EJmA696eaoiY22bWoqee9wUPjXpDJXN0gSNLLMbVXleYtlLgopLx+bI4hLefWPbC8DVlp84fs1QifkdA0Aoz+LQHxuAiZQsELIF4mUSgiKzViD/uhjGns2i1paz2Mkog0MGkFjhvjPFqOmW3nH6Rv8DFPODaCdAHq+astMWeCLFJ4FMC4KxZDww/55I0HbLYjkM1HIosMIOuel31vJ9Olr4LZpv5EoeQ9fa6n65w2u+/MRp+CmbzCR5hdxbmeLHbYMnU0Ed1V2f3CLnWyYcvdWPNJpMbShKEXNANjit1m5g8AaPy3V7QPI4wZgRt0Oi7gt/3YdscyWv4RaLY6Zz/ALJqUbw6D2QxAAAAAElFTkSuQmCC) no-repeat;
+    background-size: contain;
+}

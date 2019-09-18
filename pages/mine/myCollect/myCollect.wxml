@@ -1,0 +1,61 @@
+
+<view class="main">
+    <view class="isbackground"></view>
+    <view class="ispadding">
+        <scroll-view scroll-y style="height:100%;width:690rpx;">
+            <view  style="padding-top:34rpx;background:none">
+                <view class="titlebox">
+                    <span class="isimgs"></span>
+                    <span class="title">我的收藏</span>
+                </view>
+                <view class="hint" wx:if="{{noList}}" bindtap="addAll">
+                    <span class="icon"></span>
+                    <span>全部点歌</span>
+                </view>
+            </view>
+            <!-- 有数据时 -->
+            <view class="have" wx:if="{{noList}}">
+                <view wx:for="{{musicdata}}" wx:key="index" wx:for-item="item">
+                    <view class="isfl" data-id="{{item.songId}}" data-index="{{item}}" bindtap="toPlay">
+                        <p class="song">{{item.name}}</p>
+                        <view>
+                            <span class="grade" wx:if="{{item.songsGrade==1}}">评分</span>
+                            <span class="name">{{item.singer}}</span>
+                        </view>
+                    </view>
+                    <view class="isfr" data-id="{{item.songId}}" data-index="{{index}}" bindtap="offwindow">
+                        <span class="but3"></span>
+                    </view>
+                </view>
+            </view>
+            <!-- 没有数据时 -->
+            <view class="nolist" wx:else>
+                <image src="../../../images/nolist.png"></image>
+                <view>这里什么也没有</view>
+                <view>请在TV端点唱录音并分享或收藏</view>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 弹窗 -->
+    <view class="cancel_windows" wx:if="{{cancelwindows}}">
+        <view class="black"></view>
+        <view class="centre">
+            <image class="star" src="../../../images/bigxingxing.png"></image>
+            <view class="nocancel">取消收藏</view>
+            <p class="cancel_p">此歌曲将不再显示您的收藏列表中</p>
+            <view class="check_box">
+                <checkbox-group bindchange="oncheck">
+                    <label class="checkbox">
+                        <checkbox value="1"/>不再提示
+                    </label>
+                </checkbox-group>
+            </view>
+            <view class="ministar"></view>
+            <image class="boat" src="../../../images/boat.png"></image>
+            <view class="isbut">
+                <button class="cancel_but" bindtap="cancel">确认取消</button>
+                <button class="continue_but"  bindtap="continue">继续收藏</button>
+            </view>
+        </view>
+    </view>
+</view>

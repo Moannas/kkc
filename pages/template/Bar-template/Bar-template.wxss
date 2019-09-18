@@ -1,0 +1,13 @@
+.tr{
+  text-align: right
+}
+.timer{
+  background: none;
+  font-size: 24rpx;
+  color: white;
+  flex: 1
+}
+slider{
+  margin: 15rpx ;
+  flex:5
+}

@@ -1,0 +1,63 @@
+<!-- index.wxml -->
+<import src="../template/tl-banner/tl-banner.wxml" />
+
+<view class="index-container">
+    <!-- 轮播图 -->
+    <view class="banner">
+        <template is="tl-banner" data="{{bannerData}}" />
+    </view>
+    <!--搜索+已点--> 
+      <view class="top-search">
+        <view class="top-search-left" bindtap="goSearch">
+          <span class="top-search-left-icon"></span>
+          <input 
+          disabled="true"
+          class="top-search-left-input"
+          placeholder="搜索"
+          />
+        </view>
+        <view class="top-search-right" bindtap="goChoosed">
+          <span class="top-search-right-yidian"></span>
+          <span class="top-search-right-wenzi">已点</span>
+        </view>
+      </view>
+      <view class="kc-line-16"></view>
+    <!-- 分类 -->
+    <view class="options kc-flex">
+        <block wx:for="{{optionsData}}" wx:key="">
+            <view class="wrapper kc-flex-reverse" data-id="{{item.id}}" bindtap="goClassify">
+                <view class="icon-size-options {{item.className}}"></view>
+                <text class="kc-font-28">{{item.itemName}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="kc-line-16"></view>
+    <!-- 热门推荐 -->
+    <view class="recommend">
+        <view class="title kc-font-28">热门推荐</view>
+        <block wx:for="{{hotSongs}}" wx:key="" wx:for-item="item" wx:for-index="idx">
+            <c-song bindtap="decide" songIdx="{{idx + 1}}" songId="{{item.id}}" songColId="{{item.songId}}" songCode="{{item.code}}" songName="{{item.name}}" singerName="{{item.singer}}" songKey="{{item.redisSongsKey}}" isCol="{{isCol}}" isAdd="{{isAdd}}" isTop="{{isTop}}" isClicked="{{isClicked}}" isNeedRecording="{{false}}" bind:operatingSong="operatingSong"></c-song>
+        </block>
+        <c-status isLoading="{{isLoading}}" isEnd="{{isEnd}}" isEmpty="{{isEmpty}}"></c-status>
+    </view>
+    <!-- 遥控器 -->
+    <c-console bind:goConsole="goConsole"></c-console>
+    <!-- 授权弹窗 -->
+    <view class="fixedWindows" wx:if="{{showWindow}}">
+        <view class="OpenWindows">
+            <view class="Openback"></view>
+            <view class="centerwindow">
+                <view class="windowText">
+                    <view class="tex">快唱要获取您的头像信息，是否允许？</view>
+                </view>
+                <view class="windowBtn">
+                    <button class="btn cancel" bindtap="OutGotUserInfo">拒绝</button>
+                    <view class="v_line"></view>
+                    <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" class="btn sure">
+                        允许
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

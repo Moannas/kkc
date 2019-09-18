@@ -1,0 +1,42 @@
+.index-rank-container {
+    padding: 0 18rpx 20rpx;
+    background-color: #f3f3f3
+}
+
+.item {
+    justify-content: space-between;
+    margin-top: 20rpx;
+    padding: 12rpx;
+    height: 256rpx;
+    background-color: #fafbff
+}
+
+.content,
+.list,
+.list text {
+    background-color: #fafbff
+}
+
+.list {
+    align-items: flex-start;
+}
+
+.list text {
+    width: 100%
+}
+
+.cover {
+    flex-shrink: 0;
+    margin-right: 34rpx;
+    width: 232rpx;
+    height: 232rpx;
+    box-shadow: 0 0 10px #999
+}
+
+.list text:nth-child(2) {
+    margin: 20rpx 0
+}
+
+.icon-nav-right {
+    flex-shrink: 0
+}

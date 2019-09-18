@@ -1,0 +1,15 @@
+<view class="index-rank-container">
+    <block wx:for="{{rankData}}" wx:for-item="item1" wx:for-index="idx1" wx:key="">
+        <view class="item kc-flex" data-id="{{item1.id}}" bindtap="goDetail">
+            <view class="content kc-flex">
+                <image class="cover" src="{{item1.cover}}" />
+                <view class="list kc-flex-reverse">
+                    <block wx:for="{{item1.list}}" wx:for-item="item2" wx:for-index="idx2" wx:key="">
+                        <text class="kc-font-28">{{idx2 + 1}}. {{item2.name}} - {{item2.singer}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class="icon-nav-right"></view>
+        </view>
+    </block>
+</view>

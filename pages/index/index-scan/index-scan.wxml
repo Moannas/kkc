@@ -1,0 +1,13 @@
+<!--扫一扫页面-->
+<view class="scan">
+  <view class="scanTop">
+    <image class="scan-bg" src="/images/scan-bg.png"></image>
+    <image class="scan-logo" src="/images/scan-logo.png"></image>
+     <view class="bigCircle"></view>
+     <view class="mediumCircle"></view>
+     <view class="littleCircle"></view>
+     <image class="scan-icon" src="/images/scan-icon.png" bindtap="goscan"></image>
+     <view class="scan-p1">点击扫码链接房间</view>
+    <view class="scan-p2">请对准TV端的点歌二维码或触摸屏上的手机点歌二维码</view>
+  </view>
+</view>

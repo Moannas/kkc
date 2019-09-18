@@ -1,0 +1,72 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/aura/aura",
+    "pages/mine/mine",
+    "pages/mine/myrecord/myrecord",
+    "pages/mine/myRecordPlay/myRecordPlay",
+    "pages/mine/myCollect/myCollect",
+    "pages/mine/myConsumption/myConsumption",
+    "pages/mine/drinks/drinks",
+    "pages/mine/boxDetailed/boxDetailed",
+    "pages/mine/bill/bill",
+    "pages/mine/history/history",
+    "pages/choosed/choosed",
+    "pages/console/console",
+    "pages/search/search",
+    "pages/search/feedback/feedback",
+    "pages/search/submitted/submitted",
+    "pages/detail/detail",
+    "pages/mall/mall",
+    "pages/mall/waitFor/waitFor",
+    "pages/index/index-singer/index-singer",
+    "pages/index/index-album/index-album",
+    "pages/index/index-variety/index-variety",
+    "pages/index/index-rank/index-rank",
+    "pages/index/index-language/index-language",
+    "pages/index/index-movie/index-movie" ,
+    "pages/index/index-scan/index-scan"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "快唱",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "color": "#808080",
+    "selectedColor": "#c324ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点歌",
+        "iconPath": "images/tabbar/songwish.png",
+        "selectedIconPath": "images/tabbar/songwishactive.png"
+      },
+      {
+        "pagePath": "pages/aura/aura",
+        "text": "气氛",
+        "iconPath": "images/tabbar/aura.png",
+        "selectedIconPath": "images/tabbar/auraactive.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "酒水",
+        "iconPath": "images/tabbar/drink.png",
+        "selectedIconPath": "images/tabbar/drinkactive.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabbar/my.png",
+        "selectedIconPath": "images/tabbar/myactive.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

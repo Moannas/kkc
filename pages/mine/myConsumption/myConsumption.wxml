@@ -1,0 +1,54 @@
+<view class="mine-container">
+        <view class="main">
+            <view class="top">
+                <view class="centre">
+                    <view class="head">
+                        <view></view>
+                        <open-data wx:if="{{ispower}}" type="userAvatarUrl" class="header-img"></open-data>
+                        <image wx:else class="header-img" src="../../../images/icons/headimg.png" bindtap="showheader" />
+                    </view>
+                    <open-data type="userNickName" wx:if="{{ispower}}" class="nick-name"></open-data>
+                    <p wx:else class="name">快唱</p>
+                    <view class="roomviewnk">
+                         <span class="tex">{{offLink==true?'':'你已成功连接'}}</span>
+                    <span class="texroom">{{offLink==true?'请连接房间': Mydata.roomName}}</span>
+                    </view>
+                </view>
+                <view class="top_bottom">
+                    <view class="black_background"></view>
+                    <view class="ismoney">
+                        <view class="font_size28">￥{{Mydata.billAmount}}</view>
+                        <view class="font_size20">待/已支付金额</view>
+                    </view>
+                    <view class="width2"></view>
+                    <view class="istimer">
+                        <view class="font_size28">{{Mydata.residueTime}}</view>
+                        <view class="font_size20">剩余时间</view>
+                    </view>
+                    <view class="width2"></view>
+                    <view class="begintimer">
+                        <view class="font_size28">{{Mydata.startTime}}</view>
+                        <view class="font_size20">开始时间</view>
+                    </view>
+                </view>
+            </view>
+            <view class="bottom">
+                <view bindtap="detailed">
+                    <image src="../../../images/baoxiang.png"></image>
+                    <p>包厢详情</p>
+                </view>
+                <view bindtap="ToDrinks">
+                    <image src="../../../images/dingdan.png"></image>
+                    <p>酒水订单</p>
+                </view>
+                <view bindtap="bill">
+                    <image src="../../../images/zhangdan.png"></image>
+                    <p>账单</p>
+                </view>
+                <view class="settle_accounts" bindtap="close">
+                    <image src="../../../images/jiezhang.png"></image>
+                    <p>结算</p>
+                </view>
+            </view>
+        </view>
+</view>

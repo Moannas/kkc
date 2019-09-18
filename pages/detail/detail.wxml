@@ -1,0 +1,8 @@
+<view class="detail-container">
+    <block wx:for="{{listData}}" wx:key="" wx:for-item="item" wx:for-index="idx">
+        <c-song songIdx="{{idx + 1}}" songId="{{item.id}}" songCode="{{item.code}}" songName="{{item.name}}" singerName="{{item.singer}}" isCol="{{isCol}}" isAdd="{{isAdd}}" isTop="{{isTop}}" isClicked="{{isClicked}}" isNeedRecording="{{false}}" bind:operatingSong="operatingSong"></c-song>
+    </block>
+    <c-status isLoading="{{statusData.isLoading}}" isEnd="{{statusData.isEnd}}" isEmpty="{{statusData.isEmpty}}"></c-status>
+    <!-- 遥控器 -->
+    <c-console bind:goConsole="goConsole"></c-console>
+</view>

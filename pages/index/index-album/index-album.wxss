@@ -1,0 +1,22 @@
+@import "../../template/tl-banner/tl-banner.wxss";
+page {
+    background-color: #fff
+}
+
+.grid {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 44rpx 21rpx
+}
+
+.item {
+    margin: 0 8rpx 27rpx 8rpx
+}
+
+.cover {
+    margin-bottom: 27rpx;
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 6px;
+    box-shadow:0px 0px 8px rgba(0, 0, 0, .12)
+}

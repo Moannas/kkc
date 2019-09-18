@@ -1,0 +1,56 @@
+page,
+.index-movie-container,
+.list,
+.item {
+    background-color: #f3f3f3
+}
+
+.index-movie-container {
+    padding: 40rpx 64rpx 0
+}
+
+.item {
+    margin-bottom: 40rpx
+}
+
+.item .cover {
+    display: block;
+    width: 100%;
+    height: 446rpx;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.item .content {
+    justify-content: flex-start;
+    padding: 0 42rpx 0 30rpx;
+    height: 176rpx;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+.item .content .cover-app {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.item .introduction {
+    align-items: flex-start
+}
+
+.item .introduction .title {
+    margin-bottom: 8rpx;
+    font-size: 32rpx;
+    color: #000
+}
+
+.item .introduction .detail {
+    word-wrap: break-word;
+    white-space: normal;
+    height: 68rpx;
+    font-size: 24rpx;
+    color: #a5a5a5
+}

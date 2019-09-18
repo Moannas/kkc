@@ -1,0 +1,81 @@
+<view class="mall-container">
+    <view class="head-tab kc-flex">
+        <block wx:for="{{head_title}}" wx:key="">
+            <view class="head-item {{index == head_choseIdx ? ' active' : ''}} kc-font-30 kc-color-text" data-idx="{{index}}" bindtap="head_action">
+                {{item}}
+            </view>
+        </block>
+    </view>
+    <!-- 订单提示窗 -->
+    <view class="hint_window" wx:if="{{hintWindow}}" bindtap="waitFor">
+        <span></span>
+        <p>{{tex}}</p>
+    </view>
+    <!-- 下单成功弹窗 -->
+    <block wx:if="{{succeedWindow}}">
+        <view class="window_background"></view>
+        <view class="window_main">
+            <view class="w_main">
+                <image src="../../images/window_img.png"></image>
+                <view class="window_tex">
+                    <p>酒水下单成功</p>
+                    <span bindtap="waitFor">查看订单</span>
+                </view>
+                <button bindtap="I_know">
+                    我知道了
+                </button>
+            </view>
+        </view>
+    </block>
+    <view class="{{goodsList.length > 2? 'list' : 'list-less'}} kc-flex">
+        <block wx:for="{{goodsList}}" wx:key="">
+            <view class="goods kc-flex-reverse">
+                <view class="cover-wrapper kc-flex-reverse">
+                    <image class="cover" src="{{item.image? item.image : '/images/icons/service.png'}}"></image>
+                    <button class="icon-mall-add" hover-class="none" data-action="add" data-count="{{item.count? item.count : 0}}" data-name="{{item.name}}" data-price="{{item.price}}" data-type="{{item.type}}" data-id="{{item.id}}" bindtap="changeQuantity"  disabled="{{isClicked}}"></button>
+                    <view class="icon-mall-amount icon-goods-amount kc-font-24" hidden="{{!item.count || item.count ==0}}">
+                        {{item.count}}
+                    </view>
+                </view>
+                <view class="name kc-font-24">{{item.name}}</view>
+                <view class="kc-font-30 kc-color-mine">￥{{item.price}}</view>
+            </view>
+        </block>
+    </view>
+    <c-status isLoading="{{statusData.isLoading}}" isEnd="{{statusData.isEnd}}" isEmpty="{{statusData.isEmpty}}"></c-status>
+    
+    <view class="mask"></view>
+    <view class="order-wrapper" hidden="{{isShowCartDetail}}">
+        <view class="head kc-flex">
+            <text>已选商品</text>
+            <view class="kc-flex" bindtap="clearCartList">
+                <view class="icon-cart-del"></view>
+                <text>清空</text>
+            </view>
+        </view>
+        <view class="cart">
+            <block wx:for="{{cartList}}" wx:key="">
+                <view class="c-item kc-flex">
+                    <text class="kc-color-text c-name">{{item.name}}</text>
+                    <view class="kc-flex">
+                        <text class="kc-font-28 kc-color-mine c-price">￥{{item.goodsAmount}}</text>
+                        <button class="icon-cart icon-cart-reduce" data-ctype="2" data-action="reduce"  data-count="{{item.count? item.count : '0'}}" data-name="{{item.name}}" data-price="{{item.price}}" data-id="{{item.id}}" bindtap="changeQuantity"></button>
+                        <text class="kc-font-30 num">{{item.count}}</text>
+                        <button class="icon-cart icon-cart-add" data-ctype="1" data-action="add"  data-count="{{item.count? item.count : '0'}}" data-name="{{item.name}}" data-price="{{item.price}}" data-id="{{item.id}}" bindtap="changeQuantity"></button>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="icon-logo" bindtap="showCartDetail"></view>
+    <view class="icon-mall-amount icon-total-amount kc-font-24" hidden="{{cartTotal.count == 0}}">
+        {{cartTotal.count}}
+    </view>
+    <view class="bottom kc-flex">
+        <view class="total kc-font-24">
+            合计：
+            <text class="price">￥{{cartTotal.total}}</text>
+        </view>
+        <view class="sub" bindtap="creatOrder">下单</view>
+    </view>
+</view>

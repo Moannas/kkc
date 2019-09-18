@@ -1,0 +1,47 @@
+<view class="main">
+    <view class="isbackground"></view>
+    <view class="isauto">
+        <view class="title">
+            <p class="tex">酒水订单</p>
+            <span></span>
+            <p class="room">{{roomname}}</p>
+        </view>
+        <!-- 待支付 -->
+         <view class="nolist" wx:if="{{nodata==true}}">
+            <image src="../../../images/nolist2.png"></image>
+            <view>空空如也~</view>
+        </view>
+        <block wx:else>
+            <view class="unpaid" wx:for="{{Mydata}}" wx:key="" wx:for-item="item">
+                <view class="unpaid_tex">
+                    <view class="top_tex">
+                        <p class="icons"></p>
+                        <p class="timer">{{item.createTime}}</p>
+                        <p class="state">{{item.isPay==false?"待支付":(item.status == 0 ? "配送中":(item.status == 1 ? "已派送":(item.status == 2 ?"退单":"")))}}</p>
+                    </view>
+                    <scroll-view scroll-y style="height: 662rpx;">
+                        <view class="list" wx:for="{{item.businessGoodsDTOS}}" wx:for-item="item2" wx:key="">
+                            <image src="{{item2.image}}"></image>
+                            <view class="goods">
+                                <view>{{item2.name}}</view>
+                                <p>{{item2.description}}</p>
+                            </view>
+                            <view class="fr_num">
+                                <p>￥{{item2.price}}</p>
+                                <p>x{{item2.count}}</p>
+                            </view>
+                        </view>
+                    </scroll-view>
+                    <view class="total_tex">
+                        <p>共</p>
+                        <p style="color:#FF6D00">{{item.businessGoodsDTOS.length}}</p>
+                        <p>件商品 合计：</p>
+                        <p style="color:#E4393C">{{item.totalAmount}}</p>
+                        <p>元</p>
+                        <button wx:if="{{item.isPay==false}}" bindtap="noPay" data-item="{{item}}">查看详情</button>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

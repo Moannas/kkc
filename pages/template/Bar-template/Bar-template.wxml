@@ -1,0 +1,9 @@
+<template name="Bar-template">
+	 <view class="timer tr">
+	  <span>{{(nowvalue/60|Int)*1 < 10 ? "0"+(nowvalue/60|Int)*1:(nowvalue/60|Int)*1}}</span>:<span>{{nowvalue%60<10?"0"+nowvalue%60:nowvalue%60}}</span>
+	</view>
+	<slider block-size="{{12}}" bindchange="change" bindchanging="changing" activeColor="#ffffff" backgroundColor="#6D3DA0" min="0" value="{{nowvalue}}" max="{{alltimer}}"></slider>
+	<view class="timer">
+	  <span>{{(alltimer/60|Int)*1 < 10 ? "0"+(alltimer/60|Int)*1:(alltimer/60|Int)*1}}</span>:<span>{{alltimer%60<10?"0"+alltimer%60:alltimer%60}}</span>
+	</view>
+</template>

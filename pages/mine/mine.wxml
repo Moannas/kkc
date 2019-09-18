@@ -1,0 +1,59 @@
+<view class="mine-container">
+        <view class="main">
+            <view class="top">
+                <view class="centre">
+                <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" class="head">
+                    <open-data wx:if="{{ispower}}" type="userAvatarUrl" class="header-img"></open-data>
+                    <image wx:else class="header-img" src="../../images/icons/headimg.png" bindtap="showheader" />
+                </button>
+                <open-data type="userNickName" wx:if="{{ispower}}" class="nick-name"></open-data>
+                <p wx:else class="name">快唱</p>
+                <view class="roomviewnk">
+                    <span class="tex">{{offLink==true?'':'你已成功连接'}}</span>
+                    <span class="texroom">{{offLink==true?'请连接房间': Mydata.roomName}}</span>
+                    <image class="link {{offLink==true?'nolink':''}}" bindtap="off_link" src="{{offLink==true?'../../images/icons/duankailianjie.png':'../../images/icons/lianjie.png'}}"></image>
+                </view>
+                </view>
+                <view class="bottom">
+                    <view class="myRecord" bindtap="myRecord">
+                        <image src="../../images/luyin.png" alt=""></image>
+                        <view>
+                            <view class="luyin">我的录音</view>
+                            <span class="num">{{Mydata.soundRecordingCount}}</span>
+                            <span class="shou">首</span>
+                        </view>
+                    </view>
+                    <view class="myCollect" bindtap="myCollect">
+                        <image src="../../images/shoucang.png" alt=""></image>
+                        <view class="shoucang">
+                            <view >我的收藏</view>
+                            <span class="num">{{Mydata.favoriteSongsCount}}</span>
+                            <span class="shou">首</span>
+                        </view>
+                    </view>
+                    <view class="myConsumption"  bindtap="ismyConsumption">
+                        <image src="../../images/xiaofei.png" alt=""></image>
+                        <view class="ismargin">
+                            <view class="expense">
+                                <view class="xiaofei">我的消费</view>
+                                <span class="shou">点击查看消费明细</span>
+                            </view>
+                            <view class="money">
+                                <view class="ismoney {{Mydata.isPay == 0 ? '':'iscolor'}}">￥{{offLink==true?'***':Mydata.totalAmount}}</view>
+                                <span>{{Mydata.isPay == 0 ? "待支付金额":"已支付金额"}}</span>
+                            </view>
+                            <view class="w2px"></view>
+                            <view class="timer">
+                                <view class="istimer">{{offLink==true?'***':Mydata.residueTime}}</view>
+                                <span>剩余时间</span>
+                            </view>
+                            <span class="icon_skip"></span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="yijian" bindtap="feedback">
+                <span></span>
+            </view>
+        </view>
+</view>

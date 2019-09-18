@@ -1,0 +1,132 @@
+page{
+    width: 100%;
+    height: 100%;
+}
+.scan{
+    width: 100%;
+    height: 100%;
+}
+.scanTop{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+ .scan-bg{
+    width: 100%;
+    height: 815rpx;
+    position: relative;
+}
+.scan-logo{
+    position: absolute;
+    top: 87rpx;
+    left: 66rpx;
+    z-index: 20;
+    width: 606rpx;
+    height: 403rpx;
+}
+.bigCircle{
+    position: absolute;
+    top: 620rpx;
+    left: 200rpx;
+    z-index: 50;
+    width: 360rpx;
+    height: 360rpx;
+    border-radius: 50%;
+    background: #6f64f5;
+}
+.mediumCircle{
+    position: absolute;
+    top: 628rpx;
+    left: 215rpx;
+    z-index: 60;
+    width:330rpx;
+    height:330rpx;
+    background:rgba(255,255,255,1);
+    opacity:0.2;
+    border-radius:50%;
+    animation: myfirst 0.5s infinite;
+
+}
+.littleCircle{
+    position: absolute;
+    top: 662rpx;
+    left: 240rpx;
+    z-index: 70;
+    width:280rpx;
+    height:280rpx;
+    background:rgba(255,255,255,1);
+    opacity:0.3;
+    border-radius:50%;
+    animation: mysecond 0.4s infinite;
+}
+.scan-icon{
+    position: absolute;
+    top: 680rpx;
+    left: 260rpx;
+    z-index: 80;
+    width: 240rpx;
+    height: 240rpx;
+}
+.scan-p1{
+    position: fixed;
+    bottom: 150rpx;
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    font-size:36rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(105,24,224,1);
+    background: none;
+}
+.scan-p2{
+    position: fixed;
+    bottom: 70rpx;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size:28rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    background: none;
+}
+
+@keyframes myfirst
+{
+0% {
+    width: 330rpx;
+    height: 330rpx;
+}
+50% {
+    width: 338rpx;
+    height: 318rpx;
+    top: 642rpx;
+    left: 210rpx;
+}
+100%{
+    width: 330rpx;
+    height: 330rpx;
+}
+}
+@keyframes mysecond
+{
+0% {
+    width: 280rpx;
+    height: 280rpx;
+}
+50% {
+    width: 300rpx;
+    height: 300rpx;
+    top: 648rpx;
+    left: 228rpx;
+}
+100%{
+    width: 280rpx;
+    height: 280rpx;
+}
+}
+
+

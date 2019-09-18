@@ -1,0 +1,133 @@
+<view>
+    <view id="box">
+      <!--点击设置data-current的值  如果data-current等于0，第一个a添加cur类名，如果data-current等于1，第二个a添加cur类名，以此类推。
+      添加了cur类名，a就会改变样式 bindtap,bindclass ,v-show这三个是vue常用的指令或添加事件的方式-->
+      <view class="tab-tit">
+        <a  bindtap="menutap" data-current="0">
+          <span class="{{menuTapCurrent == '0' ? 'icon' : 'dys'}}"></span>
+          <span class="{{menuTapCurrent == '0' ? 'cur' : 'word'}}">表情</span>
+        </a>
+        <a  bindtap="menutap" data-current="1">
+          <span class="{{menuTapCurrent == '1' ? 'icon' : 'dys'}}"></span>
+          <span class="{{menuTapCurrent == '1' ? 'cur' : 'word'}}">弹幕</span>
+        </a>
+        <a  bindtap="menutap" data-current="2">
+          <span class="{{menuTapCurrent == '2' ? 'icon' : 'dys'}}"></span>
+          <span class="{{menuTapCurrent == '2' ? 'cur' : 'word'}}">灯光</span>
+        </a>
+        <a  bindtap="menutap" data-current="3">
+          <span class="{{menuTapCurrent == '3' ? 'icon' : 'dys'}}"></span>
+          <span class="{{menuTapCurrent == '3' ? 'cur' : 'word'}}">音调</span>
+        </a>
+        <a  bindtap="menutap" data-current="4">
+          <span class="{{menuTapCurrent == '4' ? 'icon' : 'dys'}}"></span>
+          <span class="{{menuTapCurrent == '4' ? 'cur' : 'word'}}">评分</span>
+        </a>
+      </view>
+      <!--根据data-current的值显示view,如果data-current等于0，第一个view显示，其它三个view不显示。
+      如果data-current等于1，第二个view显示，其它三个view不显示。以此类推-->
+      <view class="tab-con">
+        <!-- 表情 -->
+        <view class="tab-con-content" hidden="{{menuTapCurrent!='0'}}">
+           <!--<view class="tab-button">
+             <a class="{{menuCheerCurrent == '0' ? 'active' : 'noselect'}}" data-cheer="0" bindtap="cheerup">喝彩</a>
+             <a class="{{menuCheerCurrent == '1' ? 'active2' :'nochoice'}}" data-cheer="1" bindtap="cheerup">倒彩</a>
+           </view>-->
+           <view class="tab-emoji">
+           <!--喝彩-->
+             <view class="tab-ul" hidden="{{menuCheerCurrent!='0'}}">
+                <view class="tab-li" bindtap="cheerTV" wx:for="{{cheer}}" data-cheers="{{item.id}}" wx:key="index">
+                  <view class="emoji-bg"><image src="{{item.expressionImg}}"></image></view>
+                  <view class="emoji-word">{{item.name}}</view><br/>
+                  <view class="emoji-prize">免费</view>
+                </view>
+             </view>
+             <!--倒彩
+             <view class="tab-ul" hidden="{{menuCheerCurrent!='1'}}">
+               <view class="tab-li" wx:for="{{booing}}" wx:key="index">
+                  <view class="emoji-bg"><image src="{{item.expressionImg}}"></image></view>
+                  <view class="emoji-word">{{item.name}}</view><br/>
+                  <view class="emoji-prize">免费</view>
+                </view>
+             </view>
+             -->
+           </view>
+        </view>
+        <!-- 弹幕 -->
+        <view class="tab-con-content" hidden="{{menuTapCurrent!='1'}}">
+          <view class="cont">
+            <view class="title1">发射弹幕一起玩起来</view>
+            <view class="title2">———— 是时候表达你的想法了 ————</view>
+            <view class="barrage">
+              <input class="barrage-write" bindinput="getpop" value="{{currentInputData.message ? currentInputData.message : ''}}" type="text"/>
+              <button wx:if="{{disabled}}" class="barragedisabled-touch" hover-class="barrage-down" disabled="{{disabled}}">{{count}} s</button>
+              <button wx:else class="barrage-touch" hover-class="barrage-down" disabled="{{disabled}}" bindtap="sendpopTV">发送</button>
+            </view>
+            <view class="barrage-cont" >    
+              <view wx:for="{{popitems}}" wx:key="key"  class="{{item.id == currentInputData.id? 'barchoice' : 'barnochoice'}}" bindtap="toggle" data-id="{{item.id}}" data-message="{{item.name}}">{{item.name}}</view>        
+            </view>
+          </view>
+          
+        </view>
+        <!-- 灯光 -->
+        <view class="tab-con-content" hidden="{{menuTapCurrent!='2'}}">
+          <!-- <view class="lights">
+                <view wx:for="{{lightStyle}}" wx:key="key"  bindtap="lightup" data-lid="{{item.id}}"  class="{{lights === index ? 'light' : 'nolight'}}">{{item.style}}</view>
+              </view>
+           -->
+           <view class="lights">
+              <button 
+              hover-class="light" 
+              hover-stay-time="100"
+              wx:for="{{lightStyle}}" 
+              wx:key="key" 
+              data-light="{{item.id}}" 
+              bindtap="lightup"  
+              class="nolight"
+              >{{item.style}}
+              </button>
+            </view>
+        </view>
+        <!-- 音调 -->
+        <view class="tab-con-content" hidden="{{menuTapCurrent!='3'}}">
+          <view class="tone">
+              <view class="tone-li">
+                <span>自动导唱</span> 
+                <view class="body-view">
+                    <switch color="#6918E0" checked="{{checked}}" bindchange="autoSing"/>
+                </view>
+              </view>
+              <view class="tone-li">
+                <span>混响</span>
+                 <view class="live">
+                  <button hover-class="btnactive" data-live="1" bindtap="onLive" class="live-btn1"><view class="add"></view></button>
+                  <button hover-class="btnactive" data-live="0" bindtap="onLive" class="live-btn2"><view class="subtract"></view></button>
+                 </view>
+              </view>
+          </view>
+          <view class="viewstyles">
+            <button 
+            hover-stay-time="100"
+            wx:for="{{sounds}}" 
+            wx:key="key" 
+            data-sound="{{item.id}}" 
+            bindtap="soundstyle" 
+            class="{{item.id == audio ? 'styles' : 'nostyles'}}"
+            >{{item.sound}}
+            </button>
+          </view>
+        </view>
+        <!-- 评分 -->
+        <view class="tab-con-content" hidden="{{menuTapCurrent!='4'}}">
+          <view class="grade">
+            <image src="../../images/scoresStars.png"></image>
+            <view class="grade-p">当前设备已开启评分功能</view>
+            <view class="btns">
+              <view bindtap="power" data-pid="0" class="{{poww == 0 ? 'btn1active' : 'btn1'}}">OFF</view>
+              <view bindtap="power" data-pid="1" class="{{poww == 1 ? 'btn2active' : 'btn2'}}">ON</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

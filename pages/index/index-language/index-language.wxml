@@ -1,0 +1,19 @@
+<view class="index-language-container">
+    <view class="header">
+        <view class="tab">
+            <scroll-view scroll-x="true" class="scroll-wrapper">
+                <block wx:for="{{head_title}}" wx:key="">
+                    <view class="scroll-item">
+                        <view class="head-item {{index == head_selectedIdx ? ' active' : ''}} kc-font-30 kc-color-text" data-idx="{{index}}" bindtap="head_action">
+                            {{item}}
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <block wx:for="{{listData}}" wx:key="" wx:for-item="item" wx:for-index="idx">
+        <c-song songIdx="{{idx + 1}}" songId="{{item.id}}" songCode="{{item.code}}" songName="{{item.name}}" singerName="{{item.singer}}" isCol="{{isCol}}" isAdd="{{isAdd}}" isTop="{{isTop}}" isNeedRecording="{{false}}" bind:operatingSong="operatingSong"></c-song>
+    </block>
+    <c-status isLoading="{{statusData.isLoading}}" isEnd="{{statusData.isEnd}}" isEmpty="{{statusData.isEmpty}}"></c-status>
+</view>
